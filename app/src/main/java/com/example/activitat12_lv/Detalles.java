@@ -26,19 +26,19 @@ public class Detalles extends AppCompatActivity {
         String valoracio2 = game.getValoracio();
         String director = game.getDesarollador();
 
-        ImageView imageView = findViewById(R.id.imageView2);
+        ImageView imageView = findViewById(R.id.imageView);
         imageView.setImageResource(img2);
 
-        TextView textTitol = findViewById(R.id.titol2);
+        TextView textTitol = findViewById(R.id.titulo);
         textTitol.setText(titol2);
-        TextView textAny = findViewById(R.id.any2);
-        textAny.setText(any2);
-        TextView textCat = findViewById(R.id.categoria2);
+        //TextView textAny = findViewById(R.id.any2);
+        //textAny.setText(any2);
+        TextView textCat = findViewById(R.id.descTxt);
         textCat.setText(categoria2);
-        TextView textDirector = findViewById(R.id.desar);
-        textDirector.setText(director);
+        //TextView textDirector = findViewById(R.id.desar);
+       // textDirector.setText(director);
 
-        RatingBar ratingBar = findViewById(R.id.ratingBar2);
-        ratingBar.setRating(Float.valueOf(valoracio2));
+        //RatingBar ratingBar = findViewById(R.id.ratingBar2);
+        //ratingBar.setRating(Float.valueOf(valoracio2));
     }
 }
