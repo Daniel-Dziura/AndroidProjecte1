@@ -1,11 +1,10 @@
-package com.example.activitat12_lv;
+package com.example.android_projecte;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
-import android.widget.RatingBar;
 import android.widget.TextView;
 
 public class Detalles extends AppCompatActivity {

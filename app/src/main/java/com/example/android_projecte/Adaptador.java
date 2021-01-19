@@ -1,4 +1,4 @@
-package com.example.activitat12_lv;
+package com.example.android_projecte;
 
 import android.app.Activity;
 import android.content.Context;
