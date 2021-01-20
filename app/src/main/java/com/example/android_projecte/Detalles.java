@@ -1,6 +1,7 @@
 package com.example.android_projecte;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -11,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.pierfrancescosoffritti.androidyoutubeplayer.player.YouTubePlayer;
 import com.pierfrancescosoffritti.androidyoutubeplayer.player.YouTubePlayerView;
@@ -18,15 +20,15 @@ import com.pierfrancescosoffritti.androidyoutubeplayer.player.listeners.Abstract
 import com.pierfrancescosoffritti.androidyoutubeplayer.player.listeners.YouTubePlayerInitListener;
 
 public class Detalles extends AppCompatActivity implements View.OnClickListener {
-    Intent intent = getIntent();
-
-    Game game = intent.getParcelableExtra("Pelicula");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_detalles);
 
+        Intent intent = getIntent();
+
+        Game game = intent.getParcelableExtra("Pelicula");
 
         int img2 = game.getImg();
         String titol2 = game.getTitol();
@@ -34,7 +36,6 @@ public class Detalles extends AppCompatActivity implements View.OnClickListener 
         String any2 = game.getAny();
         String valoracio2 = game.getValoracio();
         String director = game.getDesarollador();
-
 
         ImageView imageView = findViewById(R.id.imageView);
         imageView.setImageResource(img2);
@@ -57,7 +58,12 @@ public class Detalles extends AppCompatActivity implements View.OnClickListener 
 
     @Override
     public void onClick(View v) {
+        Intent intent = getIntent();
+
+        Game game = intent.getParcelableExtra("Pelicula");
+
         String videoURL = game.getVideoURL();
+
         if (v.getId() == R.id.joutube) {
             Intent navegador = new Intent(Intent.ACTION_VIEW, Uri.parse(videoURL));
             startActivity(navegador);
