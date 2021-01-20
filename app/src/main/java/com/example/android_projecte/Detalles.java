@@ -1,11 +1,18 @@
 package com.example.android_projecte;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.pierfrancescosoffritti.androidyoutubeplayer.player.YouTubePlayer;
+import com.pierfrancescosoffritti.androidyoutubeplayer.player.YouTubePlayerView;
+import com.pierfrancescosoffritti.androidyoutubeplayer.player.listeners.AbstractYouTubePlayerListener;
+import com.pierfrancescosoffritti.androidyoutubeplayer.player.listeners.YouTubePlayerInitListener;
 
 public class Detalles extends AppCompatActivity {
 
@@ -39,5 +46,25 @@ public class Detalles extends AppCompatActivity {
 
         //RatingBar ratingBar = findViewById(R.id.ratingBar2);
         //ratingBar.setRating(Float.valueOf(valoracio2));
+
+        //Video
+        final String videoId = "1cAoWB6x8T0&t=66s";
+        YouTubePlayerView youTubePlayerView = findViewById(R.id.video);
+
+        getLifecycle() .addObserver(youTubePlayerView);
+
+        youTubePlayerView.initialize(new YouTubePlayerInitListener() {
+            @Override
+            public void onInitSuccess(@NonNull final YouTubePlayer youTubePlayer) {
+                youTubePlayer.addListener(new AbstractYouTubePlayerListener() {
+                    @Override
+                    public void onReady() {
+                        youTubePlayer.loadVideo(videoId, 0);
+                    }
+                });
+            }
+        }, true);
+
     }
+
 }
