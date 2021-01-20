@@ -6,9 +6,9 @@ import android.os.Parcelable;
 public class Game implements Parcelable
 {
     int codi, img;
-    String titol, any, categoria, valoracio, desarollador;
+    String titol, any, categoria, valoracio, desarollador, videoURL;
 
-    public Game(int codi, String titol, String any, String categoria, String valoracio, int img, String dev)
+    public Game(int codi, String titol, String any, String categoria, String valoracio, int img, String dev, String videoURL)
     {
         this.codi = codi;
         this.titol = titol;
@@ -17,6 +17,7 @@ public class Game implements Parcelable
         this.valoracio = valoracio;
         this.img = img;
         this.desarollador = dev;
+        this.videoURL = videoURL;
     }
 
     protected Game(Parcel in) {
@@ -27,6 +28,7 @@ public class Game implements Parcelable
         categoria = in.readString();
         valoracio = in.readString();
         desarollador = in.readString();
+        videoURL = in.readString();
     }
 
     public static final Creator<Game> CREATOR = new Creator<Game>() {
@@ -61,7 +63,6 @@ public class Game implements Parcelable
         this.categoria = categoria;
     }
 
-
     public void setValoracio(String valoracio) {
         this.valoracio = valoracio;
     }
@@ -69,6 +70,8 @@ public class Game implements Parcelable
     public void setDesarollador(String desarollador) {
         this.desarollador = desarollador;
     }
+
+    public void setVideoURL(String videoURL) { this.videoURL = videoURL; }
 
     public String getAny() {
         return any;
@@ -88,6 +91,8 @@ public class Game implements Parcelable
     }
 
     public String getDesarollador() {return desarollador; }
+
+    public String getVideoURL() { return  videoURL; }
 
     @Override
     public int describeContents() {

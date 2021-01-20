@@ -101,9 +101,10 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="#009688"
-            android:text="Descripción:"
+            android:text="Tags:"
             android:textColor="#000000"
             android:textIsSelectable="false"
+            android:textSize="24sp"
             android:textStyle="bold" />
 
         <TextView
@@ -111,7 +112,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="TextView" />
+            android:text="Tags"
+            android:textColor="#000000"
+            android:textSize="18sp" />
 
     </LinearLayout>
 
@@ -124,7 +127,7 @@
         android:freezesText="false"
         android:text="Titulo"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textSize="24sp"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="@+id/imageView"
@@ -139,14 +142,6 @@
         app:layout_constraintStart_toStartOf="@+id/buttSteam"
         app:layout_constraintTop_toBottomOf="@+id/buttSteam" />
 
-    <com.pierfrancescosoffritti.androidyoutubeplayer.player.YouTubePlayerView
-        android:id="@+id/video"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/instantPrice" />
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="246dp"
@@ -157,5 +152,36 @@
         app:layout_constraintStart_toStartOf="@+id/imageView2"
         app:layout_constraintTop_toBottomOf="@+id/space"
         tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/joutube"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FF0000"
+        android:shadowColor="#FF0000"
+        android:text="YouTube"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instantPrice" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="315dp"
+        android:layout_height="27dp"
+        android:background="#00FD0000"
+        android:gravity="center"
+        android:text="Enllaç a gameplay"
+        android:textColor="#040404"
+        android:textColorHighlight="#000000"
+        android:textIsSelectable="true"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/joutube"
+        app:layout_constraintEnd_toEndOf="@+id/joutube"
+        app:layout_constraintStart_toStartOf="@+id/joutube" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

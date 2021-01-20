@@ -27,7 +27,7 @@ public class AddGame extends AppCompatActivity {
         eDir = findViewById(R.id.editTextDesar);
         bt = findViewById(R.id.addGame);
 
-        final Game game = new Game(11,"","", "", "", R.drawable.imgdefault, "");
+        final Game game = new Game(11,"","", "", "", R.drawable.imgdefault, "", "");
 
         bt.setOnClickListener(new View.OnClickListener() {
             @Override

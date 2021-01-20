@@ -26,10 +26,10 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
 
         //Añadir objetos Game al ArrayList
-        gamesList.add(new Game(1, "Grand Theft Auto V", "2015", "Accion, Aventura, FPS", "5", R.drawable.gta, "Rockstar"));
-        gamesList.add(new Game(2, "Cyberpunk 2077", "2020", "Aventura, FPS, RPG", "4", R.drawable.cyberpunk, "CD Projekt RED"));
-        gamesList.add(new Game(3, "Forza Horizon 4", "2019", "Carreras, Deporte", "3", R.drawable.forza, "Microsoft"));
-        gamesList.add(new Game(4, "Dead by Daylight", "2019", "Acción, Cooperación, Multijugador", "4", R.drawable.dead, "Microsoft"));
+        gamesList.add(new Game(1, "Grand Theft Auto V", "2015", "Accion, Aventura, FPS", "5", R.drawable.gta, "Rockstar", "https://www.youtube.com/watch?v=AVBvKx6_AEs"));
+        gamesList.add(new Game(2, "Cyberpunk 2077", "2020", "Aventura, FPS, RPG", "4", R.drawable.cyberpunk, "CD Projekt RED", "https://www.youtube.com/watch?v=fATYs_oPJFk"));
+        gamesList.add(new Game(3, "Forza Horizon 4", "2019", "Carreras, Deporte", "3", R.drawable.forza, "Microsoft", "https://www.youtube.com/watch?v=AhJJpLaJyoA"));
+        gamesList.add(new Game(4, "Dead by Daylight", "2019", "Acción, Cooperación, Multijugador", "4", R.drawable.dead, "Microsoft", "https://www.youtube.com/watch?v=qj2MSFMsObc"));
 
         lv = findViewById(R.id.idLlista);
         bt = findViewById(R.id.btGame);

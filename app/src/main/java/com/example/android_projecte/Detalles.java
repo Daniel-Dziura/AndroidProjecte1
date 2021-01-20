@@ -5,7 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -14,16 +17,16 @@ import com.pierfrancescosoffritti.androidyoutubeplayer.player.YouTubePlayerView;
 import com.pierfrancescosoffritti.androidyoutubeplayer.player.listeners.AbstractYouTubePlayerListener;
 import com.pierfrancescosoffritti.androidyoutubeplayer.player.listeners.YouTubePlayerInitListener;
 
-public class Detalles extends AppCompatActivity {
+public class Detalles extends AppCompatActivity implements View.OnClickListener {
+    Intent intent = getIntent();
+
+    Game game = intent.getParcelableExtra("Pelicula");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_detalles);
 
-        Intent intent = getIntent();
-
-        Game game = intent.getParcelableExtra("Pelicula");
 
         int img2 = game.getImg();
         String titol2 = game.getTitol();
@@ -31,6 +34,7 @@ public class Detalles extends AppCompatActivity {
         String any2 = game.getAny();
         String valoracio2 = game.getValoracio();
         String director = game.getDesarollador();
+
 
         ImageView imageView = findViewById(R.id.imageView);
         imageView.setImageResource(img2);
@@ -47,24 +51,16 @@ public class Detalles extends AppCompatActivity {
         //RatingBar ratingBar = findViewById(R.id.ratingBar2);
         //ratingBar.setRating(Float.valueOf(valoracio2));
 
-        //Video
-        final String videoId = "1cAoWB6x8T0&t=66s";
-        YouTubePlayerView youTubePlayerView = findViewById(R.id.video);
-
-        getLifecycle() .addObserver(youTubePlayerView);
-
-        youTubePlayerView.initialize(new YouTubePlayerInitListener() {
-            @Override
-            public void onInitSuccess(@NonNull final YouTubePlayer youTubePlayer) {
-                youTubePlayer.addListener(new AbstractYouTubePlayerListener() {
-                    @Override
-                    public void onReady() {
-                        youTubePlayer.loadVideo(videoId, 0);
-                    }
-                });
-            }
-        }, true);
-
+        Button joutube = findViewById(R.id.joutube);
+        joutube.setOnClickListener(this);
     }
 
+    @Override
+    public void onClick(View v) {
+        String videoURL = game.getVideoURL();
+        if (v.getId() == R.id.joutube) {
+            Intent navegador = new Intent(Intent.ACTION_VIEW, Uri.parse(videoURL));
+            startActivity(navegador);
+        }
+    }
 }
