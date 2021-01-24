@@ -56,17 +56,18 @@ public class Detalles extends AppCompatActivity implements View.OnClickListener 
         joutube.setOnClickListener(this);
     }
 
+
     @Override
     public void onClick(View v) {
-        Intent intent = getIntent();
+        openWeb();
+    }
 
-        Game game = intent.getParcelableExtra("Pelicula");
+    public void openWeb() {
+        Intent i = getIntent();
+        Game gameL = i.getParcelableExtra("Pelicula");
+        String videoURL = gameL.getVideoURL();
 
-        String videoURL = game.getVideoURL();
-
-        if (v.getId() == R.id.joutube) {
-            Intent navegador = new Intent(Intent.ACTION_VIEW, Uri.parse(videoURL));
-            startActivity(navegador);
-        }
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(videoURL));
+        startActivity(browserIntent);
     }
 }

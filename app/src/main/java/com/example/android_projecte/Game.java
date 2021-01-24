@@ -108,5 +108,6 @@ public class Game implements Parcelable
         dest.writeString(categoria);
         dest.writeString(valoracio);
         dest.writeString(desarollador);
+        dest.writeString(videoURL);
     }
 }
