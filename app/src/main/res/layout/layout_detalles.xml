@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#A46C635A"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/g2aPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
         app:layout_constraintEnd_toEndOf="@+id/buttG2a"
         app:layout_constraintStart_toStartOf="@+id/buttG2a"
         app:layout_constraintTop_toBottomOf="@+id/buttG2a" />
@@ -19,7 +19,6 @@
         android:id="@+id/instantPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
         app:layout_constraintEnd_toEndOf="@+id/buttInstant"
         app:layout_constraintStart_toStartOf="@+id/buttInstant"
         app:layout_constraintTop_toBottomOf="@+id/buttInstant" />
@@ -100,7 +99,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="#009688"
+            android:background="#03A9F4"
             android:text="Tags:"
             android:textColor="#000000"
             android:textIsSelectable="false"
@@ -137,7 +136,6 @@
         android:id="@+id/steamPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
         app:layout_constraintEnd_toEndOf="@+id/buttSteam"
         app:layout_constraintStart_toStartOf="@+id/buttSteam"
         app:layout_constraintTop_toBottomOf="@+id/buttSteam" />
