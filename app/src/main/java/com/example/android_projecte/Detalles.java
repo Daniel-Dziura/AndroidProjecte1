@@ -52,22 +52,57 @@ public class Detalles extends AppCompatActivity implements View.OnClickListener 
         //RatingBar ratingBar = findViewById(R.id.ratingBar2);
         //ratingBar.setRating(Float.valueOf(valoracio2));
 
+        TextView preuSteam = findViewById(R.id.preuSteam);
+        preuSteam.setText(game.getSteamPrice()+"$");
+        TextView preuG2 = findViewById(R.id.g2aPrice);
+        preuG2.setText(game.getG2aPrice()+"$");
+        TextView preuinst = findViewById(R.id.instantPrice);
+        preuinst.setText(game.getIgPrice()+"$");
+
         Button joutube = findViewById(R.id.joutube);
         joutube.setOnClickListener(this);
+
+        Button bt2 = findViewById(R.id.buttSteam);
+        bt2.setOnClickListener(this);
+
+        Button bt3 = findViewById(R.id.buttG2a);
+        bt3.setOnClickListener(this);
+
+        Button bt4 = findViewById(R.id.buttInstant);
+        bt4.setOnClickListener(this);
     }
 
 
     @Override
     public void onClick(View v) {
-        openWeb();
+
+        Intent intent = getIntent();
+        Game game = intent.getParcelableExtra("Pelicula");
+        //String videoURL = game.getVideoURL();
+
+        switch(v.getId()){
+
+            case R.id.joutube:
+                openWeb(game.getVideoURL());
+                break;
+            case R.id.buttSteam:
+                openWeb(game.getSteamURL());
+                break;
+            case R.id.buttG2a:
+                openWeb(game.getG2aURL());
+                break;
+            case R.id.buttInstant:
+                openWeb(game.getIgPrice());
+                break;
+        }
     }
 
-    public void openWeb() {
+    public void openWeb(String url) {
         Intent i = getIntent();
         Game gameL = i.getParcelableExtra("Pelicula");
         String videoURL = gameL.getVideoURL();
 
-        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(videoURL));
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
         startActivity(browserIntent);
     }
 }

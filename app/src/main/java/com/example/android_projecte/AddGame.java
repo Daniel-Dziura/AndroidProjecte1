@@ -27,7 +27,7 @@ public class AddGame extends AppCompatActivity {
         eDir = findViewById(R.id.editTextDesar);
         bt = findViewById(R.id.addGame);
 
-        final Game game = new Game(11,"","", "", "", R.drawable.imgdefault, "", "");
+        final Game game = new Game(11,"","", "", "", R.drawable.imgdefault, "", "", "https://store.steampowered.com/?l=spanish", "N/A", "https://www.g2a.com/", "N/A", "https://www.instant-gaming.com/es/", "N/A");
 
         bt.setOnClickListener(new View.OnClickListener() {
             @Override
