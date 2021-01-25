@@ -34,27 +34,25 @@
 
     <Button
         android:id="@+id/buttG2a"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
         android:layout_weight="0"
-        android:text="G2a"
+        android:background="@drawable/g2a"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:backgroundTint="#2196F3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/buttInstant"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
     <Button
         android:id="@+id/buttSteam"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
         android:layout_weight="0"
-        android:text="Steam"
+        android:background="@drawable/steam"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
-        app:backgroundTint="#3B4D70"
         app:layout_constraintEnd_toStartOf="@+id/buttInstant"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/buttInstant" />
@@ -72,15 +70,14 @@
 
     <Button
         android:id="@+id/buttInstant"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
         android:layout_weight="1"
-        android:text="Instant Gaming"
+        android:background="@drawable/instantpng"
         android:textColor="#FFFFFF"
         android:textColorLink="#FF5722"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:backgroundTint="#FF5722"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
@@ -132,15 +129,6 @@
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
-    <TextView
-        android:id="@+id/steamPrice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="@+id/buttSteam"
-        app:layout_constraintHorizontal_bias="0.522"
-        app:layout_constraintStart_toStartOf="@+id/buttSteam"
-        app:layout_constraintTop_toBottomOf="@+id/buttSteam" />
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="246dp"
@@ -154,11 +142,10 @@
 
     <Button
         android:id="@+id/joutube"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#FF0000"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:background="@drawable/youtube"
         android:shadowColor="#FF0000"
-        android:text="YouTube"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -185,35 +172,10 @@
 
     <TextView
         android:id="@+id/preuSteam"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="64dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/buttSteam"
-        app:layout_constraintVertical_bias="0.01" />
-
-    <TextView
-        android:id="@+id/preuInst"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="180dp"
-        android:layout_marginTop="64dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/buttInstant"
-        app:layout_constraintVertical_bias="0.007" />
-
-    <TextView
-        android:id="@+id/preuG2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="328dp"
-        android:layout_marginTop="64dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/buttG2a"
-        app:layout_constraintVertical_bias="0.01" />
+        android:layout_width="2dp"
+        android:layout_height="21dp"
+        app:layout_constraintEnd_toEndOf="@+id/buttSteam"
+        app:layout_constraintStart_toStartOf="@+id/buttSteam"
+        app:layout_constraintTop_toBottomOf="@+id/buttSteam" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

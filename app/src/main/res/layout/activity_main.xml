@@ -9,8 +9,8 @@
 
     <ListView
         android:id="@+id/idLlista"
-        android:layout_width="410dp"
-        android:layout_height="607dp"
+        android:layout_width="413dp"
+        android:layout_height="506dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -19,10 +19,14 @@
         android:id="@+id/btGame"
         android:layout_width="155dp"
         android:layout_height="65dp"
+        android:background="#03A9F4"
         android:text="Add Game"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idLlista" />
+        app:layout_constraintTop_toBottomOf="@+id/idLlista"
+        app:layout_constraintVertical_bias="0.462" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
