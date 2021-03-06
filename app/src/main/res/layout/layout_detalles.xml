@@ -4,13 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#A4FFE2C5"
+    android:background="#A3D5D5D5"
     tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/preuSteam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/buttSteam"
+        app:layout_constraintStart_toStartOf="@+id/buttSteam"
+        app:layout_constraintTop_toBottomOf="@+id/buttSteam" />
 
     <TextView
         android:id="@+id/g2aPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/buttG2a"
         app:layout_constraintStart_toStartOf="@+id/buttG2a"
         app:layout_constraintTop_toBottomOf="@+id/buttG2a" />
@@ -19,6 +31,8 @@
         android:id="@+id/instantPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/buttInstant"
         app:layout_constraintStart_toStartOf="@+id/buttInstant"
         app:layout_constraintTop_toBottomOf="@+id/buttInstant" />
@@ -169,13 +183,5 @@
         app:layout_constraintBottom_toTopOf="@+id/joutube"
         app:layout_constraintEnd_toEndOf="@+id/joutube"
         app:layout_constraintStart_toStartOf="@+id/joutube" />
-
-    <TextView
-        android:id="@+id/preuSteam"
-        android:layout_width="2dp"
-        android:layout_height="21dp"
-        app:layout_constraintEnd_toEndOf="@+id/buttSteam"
-        app:layout_constraintStart_toStartOf="@+id/buttSteam"
-        app:layout_constraintTop_toBottomOf="@+id/buttSteam" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

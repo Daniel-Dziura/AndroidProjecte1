@@ -9,12 +9,14 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity
 {
     private ListView lv;
-    private Button bt;
+    private FloatingActionButton bt;
     private ArrayList<Game> gamesList = new ArrayList<>();
     public static final int CODI_PETICIO = 1;
     public Adaptador gameAdapter;
@@ -31,7 +33,7 @@ public class MainActivity extends AppCompatActivity
             gamesList.add(new Game(3, "Forza Horizon 4", "2019", "Carreras, Deporte", "3", R.drawable.forza, "Microsoft", "https://www.youtube.com/watch?v=AhJJpLaJyoA", "https://store.steampowered.com/search?l=spanish&term=Forza+Horizon+4", "30,00", "https://www.g2a.com/es-es/forza-horizon-4-standard-edition-xbox-live-key-global-i10000156553001", "44,00", "https://www.instant-gaming.com/es/2682-comprar-juego-xbox-play-anywhere-forza-horizon-4-pc-xbox-one/", "22,99"));
             gamesList.add(new Game(4, "Dead by Daylight", "2019", "Acción, Cooperación, Multijugador", "4", R.drawable.dead, "Microsoft", "https://www.youtube.com/watch?v=qj2MSFMsObc", "https://store.steampowered.com/agecheck/app/381210/?l=spanish", "33,00", "https://www.g2a.com/es/dead-by-daylight-steam-key-global-i10000018558012", "22,00", "https://www.instant-gaming.com/es/1904-comprar-juego-steam-dead-by-daylight/", "20,00"));
             gamesList.add(new Game(5,"Dead Cells", "2017", "Acción, Roguelike, Sous-like", "4", R.drawable.cells, "Microsoft", "https://www.youtube.com/watch?v=gX4cGcwmdsY", "https://store.steampowered.com/app/588650/Dead_Cells/", "24,99", "https://www.g2a.com/es-es/dead-cells-steam-key-global-i10000041807004", "17,50", "https://www.instant-gaming.com/es/2090-comprar-juego-steam-dead-cells/", "12,10"));
-
+            gamesList.add(new Game(6,"Satisfactory", "2020 - Early access", "Costrucciòn, Multijugador, Automaticaciòn", "5", R.drawable.satisfactory , "Coffee Stain Studios", "https://www.youtube.com/watch?v=QvWaV4qshZQ", "https://store.steampowered.com/app/526870/Satisfactory/", "29,99", "https://www.g2a.com/search?query=Satisfactory", "26,70", "https://www.instant-gaming.com/es/4229-comprar-juego-steam-satisfactory/", "25,99"));
             lv = findViewById(R.id.idLlista);
             bt = findViewById(R.id.btGame);
 

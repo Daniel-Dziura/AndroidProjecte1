@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#A48F9193"
+        android:background="@drawable/back_tiquet"
         android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,7 +42,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"
             android:layout_toRightOf="@id/imageView"
-            android:text="categoria" />
+            android:text="Categoria" />
 
         <TextView
             android:id="@+id/any"
@@ -50,7 +52,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="40dp"
             android:layout_toRightOf="@id/imageView"
-            android:text="any" />
+            android:text="Any" />
 
 
         <RatingBar
@@ -64,4 +66,5 @@
             android:layout_toRightOf="@id/any" />
 
     </RelativeLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
