@@ -26,6 +26,9 @@ public class Game implements Parcelable
         this.igPrice = igPrice;
     }
 
+    public Game() {
+    }
+
     protected Game(Parcel in) {
         codi = in.readInt();
         img = in.readInt();
@@ -175,5 +178,25 @@ public class Game implements Parcelable
         dest.writeString(g2aPrice);
         dest.writeString(igURL);
         dest.writeString(igPrice);
+    }
+
+    @Override
+    public String toString() {
+        return "Game{" +
+                "codi=" + codi +
+                ", img=" + img +
+                ", titol='" + titol + '\'' +
+                ", any='" + any + '\'' +
+                ", categoria='" + categoria + '\'' +
+                ", valoracio='" + valoracio + '\'' +
+                ", desarollador='" + desarollador + '\'' +
+                ", videoURL='" + videoURL + '\'' +
+                ", steamURL='" + steamURL + '\'' +
+                ", steamPrice='" + steamPrice + '\'' +
+                ", g2aURL='" + g2aURL + '\'' +
+                ", g2aPrice='" + g2aPrice + '\'' +
+                ", igURL='" + igURL + '\'' +
+                ", igPrice='" + igPrice + '\'' +
+                '}';
     }
 }
