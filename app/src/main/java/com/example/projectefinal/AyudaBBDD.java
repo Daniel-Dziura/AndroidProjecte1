@@ -25,6 +25,12 @@ public class AyudaBBDD extends SQLiteOpenHelper {
     public static final String G_2_A_PRICE = "g2aPrice";
     public static final String IG_URL = "igURL";
     public static final String IG_PRICE = "igPrice";
+    public static final String ID = "ID";
+    private AyudaBBDD ajuda;
+
+
+    private SQLiteDatabase db;
+
 
     public AyudaBBDD(@Nullable Context context) {
         super(context, "game.db", null, 1);
@@ -32,7 +38,7 @@ public class AyudaBBDD extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String createTableStatement = "CREATE TABLE " + GAME_TABLE + " (ID INTEGER PRIMARY KEY AUTOINCREMENT," +
+        String createTableStatement = "CREATE TABLE " + GAME_TABLE + " (" + ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
                 TITOL + " TEXT, " + ANY + " TEXT, " + CATEGORIA + " TEXT, " + VALORACIO + " TEXT, " + IMG + " INTEGER, " +
                 DESAROLLADOR + " TEXT, " + VIDEO_URL + " TEXT," +
                 STEAM_URL + " TEXT, " + STEAM_PRICE + " TEXT, " + G_2_A_URL + " TEXT, " +
@@ -156,6 +162,14 @@ public class AyudaBBDD extends SQLiteOpenHelper {
         else {
         }
 
+    }
+
+    public boolean deleteGame(String IDFila) {
+        return db.delete(AyudaBBDD.GAME_TABLE, AyudaBBDD.TITOL+ " = " + IDFila, null) > 0;
+    }
+
+    public void tanca() {
+        ajuda.close();
     }
 }
 

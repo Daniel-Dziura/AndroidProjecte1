@@ -157,6 +157,9 @@ public class Game implements Parcelable
         this.igPrice = igPrice;
     }
 
+
+    public int getCodi() { return codi; }
+
     @Override
     public int describeContents() {
         return 0;
@@ -199,4 +202,5 @@ public class Game implements Parcelable
                 ", igPrice='" + igPrice + '\'' +
                 '}';
     }
+
 }

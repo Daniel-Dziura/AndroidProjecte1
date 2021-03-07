@@ -25,7 +25,6 @@ public class AddGame extends AppCompatActivity {
         eTitol = findViewById(R.id.editTextTitol);
         eCat = findViewById(R.id.editTextCat);
         eAny = findViewById(R.id.editTextAny);
-
         eVal = findViewById(R.id.editTextVal);
         eDir = findViewById(R.id.editTextDesar);
         bt = findViewById(R.id.addGame);

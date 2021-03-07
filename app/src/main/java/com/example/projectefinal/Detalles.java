@@ -4,13 +4,23 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import java.util.ArrayList;
+
 public class Detalles extends AppCompatActivity implements View.OnClickListener {
+
+    private FloatingActionButton modBt;
+    public static final int CODI_PETICIO = 1;
+    private ArrayList<Game> gamesList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,24 +34,18 @@ public class Detalles extends AppCompatActivity implements View.OnClickListener 
         int img2 = game.getImg();
         String titol2 = game.getTitol();
         String categoria2 = game.getCategoria();
-        String any2 = game.getAny();
-        String valoracio2 = game.getValoracio();
-        String director = game.getDesarollador();
 
         ImageView imageView = findViewById(R.id.imageView);
         imageView.setImageResource(img2);
 
         TextView textTitol = findViewById(R.id.titulo);
         textTitol.setText(titol2);
-        //TextView textAny = findViewById(R.id.any2);
-        //textAny.setText(any2);
+
         TextView textCat = findViewById(R.id.descTxt);
         textCat.setText(categoria2);
-        //TextView textDirector = findViewById(R.id.desar);
-       // textDirector.setText(director);
 
-        //RatingBar ratingBar = findViewById(R.id.ratingBar2);
-        //ratingBar.setRating(Float.valueOf(valoracio2));
+        modBt = findViewById(R.id.modButton);
+        //modBt.setOnClickListener(this);
 
         TextView preuSteam = findViewById(R.id.preuSteam);
         preuSteam.setText(game.getSteamPrice()+"$");
@@ -61,12 +65,22 @@ public class Detalles extends AppCompatActivity implements View.OnClickListener 
 
         Button bt4 = findViewById(R.id.buttInstant);
         bt4.setOnClickListener(this);
+
+        modBt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(view.getContext(), ModificarGame.class);
+                i.putExtra("Pelicula", game);
+                startActivity(i);
+                //Toast.makeText(Detalles.this, game.toString(), Toast.LENGTH_LONG).show();
+            }
+        });
+
     }
 
 
     @Override
     public void onClick(View v) {
-
         Intent intent = getIntent();
         Game game = intent.getParcelableExtra("Pelicula");
         //String videoURL = game.getVideoURL();
@@ -85,6 +99,13 @@ public class Detalles extends AppCompatActivity implements View.OnClickListener 
             case R.id.buttInstant:
                 openWeb(game.getIgPrice());
                 break;
+            /*case R.id.modButton:
+                Intent i = new Intent(v.getContext(), ModificarGame.class);
+                i.putExtra("Pelicula", game);
+                startActivityForResult(i, CODI_PETICIO);
+                startActivity(i);
+                break;*/
+
         }
     }
 
