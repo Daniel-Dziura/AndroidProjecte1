@@ -7,21 +7,6 @@
     android:background="#A3D5D5D5"
     tools:context=".AddGame">
 
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="#0003A9F4"
-        android:text="   Selecciona una imatge"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextYoutube" />
-
     <TextView
         android:id="@+id/textView8"
         android:layout_width="0dp"
@@ -32,20 +17,20 @@
         android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/editTextYoutube"
+        app:layout_constraintBottom_toTopOf="@+id/editTextYoutubeMod"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editTextYoutube"
+        android:id="@+id/editTextYoutubeMod"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_marginTop="104dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextVal" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextValMod" />
 
     <TextView
         android:id="@+id/textView7"
@@ -56,7 +41,7 @@
         android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/editTextDesar"
+        app:layout_constraintBottom_toTopOf="@+id/editTextDesarMod"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -69,7 +54,7 @@
         android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/editTextCat"
+        app:layout_constraintBottom_toTopOf="@+id/editTextCatMod"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
@@ -84,36 +69,37 @@
         android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/editTextAny"
+        app:layout_constraintBottom_toTopOf="@+id/editTextAnyMod"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/addGame"
+        android:id="@+id/modGame"
         android:layout_width="wrap_content"
         android:layout_height="55dp"
+        android:layout_marginBottom="75dp"
         android:background="@drawable/bt_redondo"
-        android:text="ADD"
+        android:text="Modificar"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imgId"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgId" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextYoutubeMod" />
 
     <EditText
-        android:id="@+id/editTextTitol"
+        android:id="@+id/editTextTitolMod"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_marginBottom="25dp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextCat"
+        app:layout_constraintBottom_toTopOf="@+id/editTextCatMod"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextCat"
+        android:id="@+id/editTextCatMod"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_marginTop="25dp"
@@ -123,25 +109,25 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextTitol" />
 
     <EditText
-        android:id="@+id/editTextAny"
+        android:id="@+id/editTextAnyMod"
         android:layout_width="154dp"
         android:layout_height="40dp"
         android:layout_marginTop="24dp"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextVal"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextValMod"
         app:layout_constraintEnd_toEndOf="@+id/textView5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextCat" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextCatMod" />
 
     <EditText
-        android:id="@+id/editTextVal"
+        android:id="@+id/editTextValMod"
         android:layout_width="104dp"
         android:layout_height="40dp"
         android:layout_marginTop="24dp"
         android:text="4.5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/editTextAny"
-        app:layout_constraintTop_toBottomOf="@+id/editTextCat" />
+        app:layout_constraintStart_toEndOf="@+id/editTextAnyMod"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCatMod" />
 
     <TextView
         android:id="@+id/textView6"
@@ -152,19 +138,19 @@
         android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/editTextVal"
-        app:layout_constraintEnd_toEndOf="@+id/editTextVal"
+        app:layout_constraintBottom_toTopOf="@+id/editTextValMod"
+        app:layout_constraintEnd_toEndOf="@+id/editTextValMod"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editTextVal" />
+        app:layout_constraintStart_toStartOf="@+id/editTextValMod" />
 
     <EditText
-        android:id="@+id/editTextDesar"
+        android:id="@+id/editTextDesarMod"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_marginTop="28dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextVal" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextValMod" />
 
     <TextView
         android:id="@+id/textView2"
@@ -179,15 +165,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imgId"
-        android:layout_width="120dp"
-        android:layout_height="179dp"
-        android:layout_marginStart="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9"
-        app:srcCompat="@drawable/imgdefault" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
