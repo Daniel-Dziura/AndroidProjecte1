@@ -36,7 +36,7 @@ public class AddGame extends AppCompatActivity {
         eVal.setText(getValue(getApplicationContext(), "val"));
         eDir.setText(getValue(getApplicationContext(), "dir"));
 
-        final Game game = new Game(11,"","", "", "", R.drawable.imgdefault, "", "", "https://store.steampowered.com/?l=spanish", "N/A", "https://www.g2a.com/", "N/A", "https://www.instant-gaming.com/es/", "N/A");
+        final Game game = new Game(-1,"","", "", "", R.drawable.imgdefault, "", "", "https://store.steampowered.com/?l=spanish", "N/A", "https://www.g2a.com/", "N/A", "https://www.instant-gaming.com/es/", "N/A");
 
         bt.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,8 +52,14 @@ public class AddGame extends AppCompatActivity {
                 Editable any = eAny.getText();
                 game.setAny(any.toString());
 
-                Editable val = eVal.getText();
-                game.setValoracio(val.toString());
+                Editable val;
+                val = eVal.getText();
+                if (val.equals("")){
+                    game.setValoracio(val.toString());
+                }else{
+                    game.setValoracio("4.5");
+                }
+
 
                 Editable dir = eDir.getText();
                 game.setDesarollador(dir.toString());
